@@ -118,15 +118,6 @@
                                     <rect key="frame" x="7" y="164" width="8" height="21"/>
                                 </variation>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yue-Bc-XXa">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.010051519910000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="302" width="339" height="64"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk7-Cd-jRr">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.30213585500000001" green="0.58792163389999996" blue="0.79148910979999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -141,6 +132,15 @@
                                     <action selector="clearAllBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UnR-zY-LRT"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yue-Bc-XXa">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.010051519910000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="254" width="339" height="64"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -156,8 +156,8 @@
                                 <exclude reference="1Vn-n2-sR6"/>
                                 <exclude reference="rd4-iw-Y9p"/>
                                 <exclude reference="had-Du-gwR"/>
-                                <exclude reference="Yue-Bc-XXa"/>
                                 <exclude reference="Gk7-Cd-jRr"/>
+                                <exclude reference="Yue-Bc-XXa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -173,8 +173,8 @@
                                 <include reference="1Vn-n2-sR6"/>
                                 <include reference="rd4-iw-Y9p"/>
                                 <include reference="had-Du-gwR"/>
-                                <include reference="Yue-Bc-XXa"/>
                                 <include reference="Gk7-Cd-jRr"/>
+                                <include reference="Yue-Bc-XXa"/>
                             </mask>
                         </variation>
                     </view>
@@ -182,15 +182,15 @@
                         <outlet property="clearAllBtn" destination="Gk7-Cd-jRr" id="hat-qP-bgb"/>
                         <outlet property="enterMessageTextField" destination="gIU-5T-7EY" id="H1Y-oS-jxQ"/>
                         <outlet property="enterNameTextField" destination="ZZw-Ji-NS7" id="OXz-aI-flO"/>
-                        <outlet property="enterRecepientName" destination="KBL-M9-XLl" id="9vI-F9-wZv"/>
+                        <outlet property="enterRecipientName" destination="KBL-M9-XLl" id="NQZ-A7-3w1"/>
                         <outlet property="errorLabel" destination="Yue-Bc-XXa" id="jkL-0C-Ptl"/>
                         <outlet property="mailButton" destination="tZU-OA-2Od" id="Gcb-bz-FVg"/>
                         <outlet property="messageErrorIndicator" destination="had-Du-gwR" id="0Dk-l8-6Zy"/>
                         <outlet property="messageLabel" destination="4BF-jw-2xF" id="7qt-VT-tPP"/>
                         <outlet property="nameErrorIndicator" destination="1Vn-n2-sR6" id="9cH-0O-gen"/>
                         <outlet property="nameLabel" destination="dOD-3x-x2Y" id="YwE-6a-Qqu"/>
-                        <outlet property="recepientErrorIndicator" destination="rd4-iw-Y9p" id="opt-W2-TWh"/>
-                        <outlet property="recepientLabel" destination="HFD-94-wvM" id="k2n-p6-P8E"/>
+                        <outlet property="recipientErrorIndicator" destination="rd4-iw-Y9p" id="Act-8M-7yR"/>
+                        <outlet property="recipientLabel" destination="HFD-94-wvM" id="loP-Nf-vO0"/>
                         <outlet property="stampIcon" destination="nGu-f8-N4B" id="GvF-vf-WVX"/>
                     </connections>
                 </viewController>

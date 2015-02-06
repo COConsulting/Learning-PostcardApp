@@ -12,18 +12,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var enterNameTextField: UITextField!
-    @IBOutlet weak var enterRecepientName: UITextField!
+    @IBOutlet weak var enterRecipientName: UITextField!
     @IBOutlet weak var enterMessageTextField: UITextField!
     @IBOutlet weak var stampIcon: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var recepientLabel: UILabel!
+    @IBOutlet weak var recipientLabel: UILabel!
     @IBOutlet weak var nameErrorIndicator: UILabel!
-    @IBOutlet weak var recepientErrorIndicator: UILabel!
+    @IBOutlet weak var recipientErrorIndicator: UILabel!
     @IBOutlet weak var messageErrorIndicator: UILabel!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var mailButton: UIButton!
     @IBOutlet weak var clearAllBtn: UIButton!
-
 
     
     override func viewDidLoad() {
@@ -40,17 +39,17 @@ class ViewController: UIViewController {
     @IBAction func clearAllBtn(sender: UIButton) {
         //Make sure that all hidden objects are hidden
         nameErrorIndicator.hidden=true
-        recepientErrorIndicator.hidden=true
+        recipientErrorIndicator.hidden=true
         messageErrorIndicator.hidden=true
         errorLabel.hidden=true
         messageLabel.hidden=true
         stampIcon.hidden=true
         nameLabel.hidden=true
-        recepientLabel.hidden=true
+        recipientLabel.hidden=true
         
         //Clear All fields
         enterNameTextField.text=""
-        enterRecepientName.text=""
+        enterRecipientName.text=""
         enterMessageTextField.text=""
         
         //Reset Buttons to default state
@@ -62,15 +61,15 @@ class ViewController: UIViewController {
         
         //Make sure that all hidden objects are hidden
         nameErrorIndicator.hidden=true
-        recepientErrorIndicator.hidden=true
+        recipientErrorIndicator.hidden=true
         messageErrorIndicator.hidden=true
         errorLabel.hidden=true
         messageLabel.hidden=true
         stampIcon.hidden=true
         nameLabel.hidden=true
-        recepientLabel.hidden=true
+        recipientLabel.hidden=true
         
-        if(enterNameTextField.text=="" || enterRecepientName.text=="" || enterMessageTextField.text==""){
+        if(enterNameTextField.text=="" || enterRecipientName.text=="" || enterMessageTextField.text==""){
 
             errorLabel.hidden=false
             errorLabel.text="Please correct the missing information above."
@@ -84,10 +83,10 @@ class ViewController: UIViewController {
                 nameErrorIndicator.hidden=false
             }
             
-            if(enterRecepientName.text==""){
-//              recepientLabel.textColor = UIColor.redColor()
-//              recepientLabel.text="Please Enter Recepient's Name"
-                recepientErrorIndicator.hidden=false
+            if(enterRecipientName.text==""){
+//              recipientLabel.textColor = UIColor.redColor()
+//              recipientLabel.text="Please Enter Recipient's Name"
+                recipientErrorIndicator.hidden=false
             }
             
             if(enterMessageTextField.text==""){
@@ -100,18 +99,21 @@ class ViewController: UIViewController {
             messageLabel.hidden=false
             stampIcon.hidden=false
             nameLabel.hidden=false
-            recepientLabel.hidden=false
+            recipientLabel.hidden=false
             
             nameErrorIndicator.hidden=true
             nameLabel.text="From: " + enterNameTextField.text
+            nameLabel.textColor = UIColor.blueColor()
             enterNameTextField.text=""
 
-            recepientErrorIndicator.hidden=true
-            recepientLabel.text="To: " + enterRecepientName.text
-            enterRecepientName.text=""
+            recipientErrorIndicator.hidden=true
+            recipientLabel.text="To: " + enterRecipientName.text
+            recipientLabel.textColor = UIColor.blueColor()
+            enterRecipientName.text=""
 
             messageErrorIndicator.hidden=true
             messageLabel.text=enterMessageTextField.text
+            messageLabel.textColor = UIColor.blueColor()
             enterMessageTextField.text=""
             
             mailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
@@ -121,7 +123,7 @@ class ViewController: UIViewController {
         
         enterMessageTextField.resignFirstResponder()
         enterNameTextField.resignFirstResponder()
-        enterRecepientName.resignFirstResponder()
+        enterRecipientName.resignFirstResponder()
     }
 
 }
